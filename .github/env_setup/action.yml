@@ -90,7 +90,7 @@ runs:
       run: |
         set -euo pipefail
         echo "::group::Install ccache with ECS"
-        wget -q https://github.com/nullptr-t-oss/kernel_kit/raw/refs/heads/main/bin/ccache-x86-64 -O ccache
+        wget -q https://github.com/shatteredspine/kernel_kit/raw/refs/heads/main/bin/ccache-x86-64 -O ccache
         sudo cp -f ./ccache /usr/bin/ccache
         sudo chmod +x /usr/bin/ccache
         rm -f ./ccache
@@ -225,7 +225,7 @@ runs:
         echo "Using AnyKernel3 branch: $ANYKERNEL_BRANCH"
         git clone --depth=1 https://github.com/nullptr-t-oss/AnyKernel3.git -b "$ANYKERNEL_BRANCH"
         git clone --depth=1 https://github.com/TheWildJames/kernel_patches.git
-        git clone --depth=1 https://github.com/nullptr-t-oss/kernel_kit.git
+        git clone --depth=1 https://github.com/shatteredspine/kernel_kit.git
         # git clone --depth=1 https://github.com/Bouteillepleine/kernel_patches.git -b main bouton_kernel_patches
 
     - name: Setup Base Environment
